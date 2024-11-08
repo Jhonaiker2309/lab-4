@@ -25,5 +25,8 @@ jobs:
       - name: Run test suite
         run: |
           pipenv run pytest
+      - name: Install Pytest
+        run: |
+          pipenv install --dev pytest-cov
       - name: Run Tests with Coverage
-        run: pipenv run pytest --cov=app
+        run: pipenv run pytest --cov
